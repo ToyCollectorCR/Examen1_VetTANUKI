@@ -7,8 +7,8 @@
             <ul>
             <?php if(isset($_SESSION['usuarioLogueado'])):?>
                 
-                <li><a href="listarCitas.php">Listar Citas</a></li>
-                <li><a href="cerrarSesion.php">Registrar Cita</a></li>
+                <li><a href="listarCitas.php">Listado de Citas</a></li>
+                <li><a href="registroCitas.php">Registro De Citas</a></li>
                 
                 <li><a href="registrar.php">Registrar Usuario</a></li>
                 <li><a href="index.php">Activar/Desactivar Usuario</a></li>

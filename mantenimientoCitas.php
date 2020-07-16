@@ -1,26 +1,26 @@
 <?php
   require_once './baseDatos/consultaCitas.php';   
 
-  
+   // Switch de Decision para todos los POST que lleguen a Existir
   if(isset($_POST['accion'])){
     switch ($_POST['accion']) {
         case 'registrar':
             guardarCita();
-            header("location:index.php");
+            header("location:listarCitas.php");
             break;
         case 'actualizar':
             actualizarCita();
-            header("location:index.php");
+            header("location:listarCitas.php");
             break;            
     }
   }
   
-  // Aqui entra el Eliminar
+  // Switch de Decision para todos los GET que lleguen a Existir
   if(isset($_GET['accion'])){
     switch ($_GET['accion']) {
         case 'eliminar':
             eliminarCita();
-            header("location:index.php");
+            header("location:listarCitas.php");
             break;       
     }
   }  
@@ -32,7 +32,7 @@
       $edadmascota = $_POST['edadmascota'];
       $fechacita = $_POST['fechacita'];
       $observaciones = $_POST['observaciones'];
-
+      
       registrarCita($nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones);
   }
   
@@ -49,7 +49,7 @@
       $fechacita = $_POST['fechacita'];
       $observaciones = $_POST['observaciones'];
       
-      modificarCita($nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones);   
+      modificarCita($id,$nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones);   
   }
   
 ?>

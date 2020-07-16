@@ -16,31 +16,32 @@ require_once 'conexionDB.php';
   }
 
   //registro citas
-  function registrarProducto($nombre,$marca,$presentacion,$cantidad,$precio){
+  function registrarCita($nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones){
       
-      $sql = "INSERT INTO PRODUCTOS VALUES('$nombre','$marca','$presentacion',$cantidad,$precio)";
-      $resultado = mysqli_query($GLOBALS['conexion'], $sql);      
+      $sql = "INSERT INTO VETCITAS VALUES('$nombrepropietario','$nombremascota','$raza','$edadmascota','$fechacita','$observaciones')";
+      $resultado = mysqli_query($GLOBALS['conexion'], $sql); 
+      
   }
 
    //elimino citas
-  function eliminarProductoNombre($nombre){
-      $sql = "DELETE FROM PRODUCTOS WHERE NOMBRE = '$nombre'";
+  function eliminarCitaNombre($nombrepropietario){
+      $sql = "DELETE FROM VETCITAS WHERE NOMBREPROPIETARIO = '$nombrepropietario'";
       $resultado = mysqli_query($GLOBALS['conexion'], $sql);   
   }
   
   //Busco citas por nombre
-  function buscarProducto($nombre){
-      $sql = "SELECT * FROM PRODUCTOS WHERE NOMBRE = '$nombre'";
+  function buscarCita($nombrepropietario){
+      $sql = "SELECT * FROM VETCITAS WHERE nombrepropietario = '$nombrepropietario'";
        $resultado = mysqli_query($GLOBALS['conexion'], $sql); 
        
-       $producto = mysqli_fetch_assoc($resultado);
+       $cita = mysqli_fetch_assoc($resultado);
        
-       return $producto;
+       return $cita;
   }
 
   //modifico citas
-  function modificarProducto($nombre,$marca,$presentacion,$cantidad,$precio){
-      $sql = "UPDATE PRODUCTOS SET MARCA='$marca',PRESENTACION='$presentacion',CANTIDAD=$cantidad,PRECIO=$precio WHERE NOMBRE='$nombre'";
+  function modificarCita($id,$nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones){
+      $sql = "UPDATE VETCITAS SET nombrepropietario='$nombrepropietario',nombremascota='$nombremascota',raza=$raza,edadmascota=$edadmascota,fechacita=$fechacita,observaciones=$observaciones  WHERE ID='$id'";
       $resultado = mysqli_query($GLOBALS['conexion'], $sql);       
   }
 

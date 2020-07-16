@@ -2,7 +2,7 @@
 <!--/**/!-->
 
 
-    <?php 
+<?php 
     
 require_once './baseDatos/consultaCitas.php'; 
    
