@@ -1,4 +1,5 @@
 <?php
+ require_once './baseDatos/consultaUsuarios.php';
 
 // Switch de Decision para todos los POST que lleguen a Existir
     if(isset($_POST['accion'])){
@@ -24,7 +25,7 @@
       $rol = $_POST['rol'];
       $password = $_POST['password'];
       
-      registrarUsuario($nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones);
+      registrarUsuario($nombre,$cedula,$telefono,$correo,$direccion,$estado,$rol,$password);
   }
   
 ?>

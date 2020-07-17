@@ -11,5 +11,12 @@
        
        return $usuario;
   } 
+  //registro citas
+  function registrarUsuario($nombre,$cedula,$telefono,$correo,$direccion,$estado,$rol,$password){
+      
+      $sql = "INSERT INTO VETUSUARIOS VALUES('$nombre','$cedula',$telefono,'$correo','$direccion','$estado','$rol','$password')";
+      $resultado = mysqli_query($GLOBALS['conexion'], $sql); 
+      
+  }
   
 ?>
