@@ -18,20 +18,20 @@ require_once 'conexionDB.php';
   //registro citas
   function registrarCita($nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones){
       
-      $sql = "INSERT INTO VETCITAS VALUES('$nombrepropietario','$nombremascota','$raza','$edadmascota','$fechacita','$observaciones')";
+      $sql = "INSERT INTO VETCITAS(nombrepropietario,nombremascota,raza,edadmascota,fechacita,observaciones) VALUES('$nombrepropietario','$nombremascota','$raza','$edadmascota','$fechacita','$observaciones')";
       $resultado = mysqli_query($GLOBALS['conexion'], $sql); 
       
   }
 
    //elimino citas
-  function eliminarCitaNombre($nombrepropietario){
-      $sql = "DELETE FROM VETCITAS WHERE NOMBREPROPIETARIO = '$nombrepropietario'";
+  function eliminarCitaid($id){
+      $sql = "DELETE FROM VETCITAS WHERE id = $id";
       $resultado = mysqli_query($GLOBALS['conexion'], $sql);   
   }
   
   //Busco citas por nombre
-  function buscarCita($nombrepropietario){
-      $sql = "SELECT * FROM VETCITAS WHERE nombrepropietario = '$nombrepropietario'";
+  function buscarCita($id){
+      $sql = "SELECT * FROM VETCITAS WHERE id = $id";
        $resultado = mysqli_query($GLOBALS['conexion'], $sql); 
        
        $cita = mysqli_fetch_assoc($resultado);
@@ -41,7 +41,7 @@ require_once 'conexionDB.php';
 
   //modifico citas
   function modificarCita($id,$nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones){
-      $sql = "UPDATE VETCITAS SET nombrepropietario='$nombrepropietario',nombremascota='$nombremascota',raza=$raza,edadmascota=$edadmascota,fechacita=$fechacita,observaciones=$observaciones  WHERE ID='$id'";
+      $sql = "UPDATE VETCITAS SET nombrepropietario='$nombrepropietario',nombremascota='$nombremascota',raza='$raza',edadmascota='$edadmascota',fechacita='$fechacita',observaciones='$observaciones'  WHERE id=$id";
       $resultado = mysqli_query($GLOBALS['conexion'], $sql);       
   }
 

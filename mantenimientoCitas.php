@@ -39,11 +39,12 @@
   }
   
   function eliminarCita(){
-      $nombrepropietario = $_GET['$nombrepropietario'];
-      eliminarCitaNombre($nombrepropietario);
+      $id = $_GET['id'];
+      eliminarCitaid($id);
   }
   
   function actualizarCita(){
+      $id = $_POST['id'];
       $nombrepropietario = $_POST['nombrepropietario'];
       $nombremascota = $_POST['nombremascota'];
       $raza = $_POST['raza'];

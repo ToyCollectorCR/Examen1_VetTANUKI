@@ -1,12 +1,11 @@
 <?php 
 include_once 'include/encabezado.php'; 
 
-var_dump($_GET);
-  if(isset($_GET['nombre'])){
-      echo 'Probando IF';
-      
-      $nombrepropietario  = $_GET['nombre'];
-      $cita = buscarCita($nombrepropietario);
+
+  if(isset($_GET['id'])){
+     
+      $id  = $_GET['id'];
+      $cita = buscarCita($id);
       //var_dump($cita);
       //die();
       
@@ -15,7 +14,8 @@ var_dump($_GET);
 <section>
     <br>
     <h3>AQUI PUEDE EDITAR LAS CITAS YA EXISTENTES</h3>
-    <form method="post" action="mantenimientoCitas.php">		
+    <form method="post" action="mantenimientoCitas.php">
+        <input type="text"  name="id" readonly="" value="<?=$cita['id'];?>">;
         <input type="text" placeholder="Nombre Propietario" name="nombrepropietario" required value="<?=$cita['nombrepropietario'];?>">
         <input type="text" placeholder="Nombre Mascota"  name="nombremascota" required value="<?=$cita['nombremascota'];?>">
         <input type="text" placeholder="Raza" name="raza" required value="<?=$cita['raza'];?>">                

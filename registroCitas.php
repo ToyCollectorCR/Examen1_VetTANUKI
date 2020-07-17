@@ -7,7 +7,7 @@
         <input type="text" placeholder="Nombre Mascota"  name="nombremascota" required>
         <input type="text" placeholder="Raza" name="raza" required>                
         <input type="text" placeholder="Edad Mascota" name="edadmascota" required>
-        <input type="text" placeholder="01/Enero/2020" name="fechacita" required>
+        <input type="date" placeholder="Fecha Cita" name="fechacita" required>
          <input type="text" placeholder="Causa de la Cita" name="observaciones" required>
         <input type="submit" name="accion" value="registrar">
     </form>
