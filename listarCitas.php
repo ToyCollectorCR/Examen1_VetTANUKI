@@ -29,7 +29,7 @@
                     <td><?=$cita['edadmascota'];?></td>
                     <td><?=$cita['fechacita'];?></td>
                     <td><?=$cita['observaciones'];?></td>
-                    <td><a href="editarCitas.php?id=<?=$cita['id'];?>&nombre=<?=$cita['nombrepropietario'];?>">Modificar</a></td>
+                    <td><a href="editarCitas.php?nombre=<?=$cita['nombrepropietario'];?>">Modificar</a></td>
                     <td><a href="mantenimientoCitas.php?accion=eliminar&nombrepropietario=<?=$cita['nombrepropietario'];?>">Eliminar</a></td>
                 </tr>
         <?php

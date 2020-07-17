@@ -2,7 +2,7 @@
   require_once './baseDatos/consultaCitas.php';   
 
    // Switch de Decision para todos los POST que lleguen a Existir
-  if(isset($_POST['accion'])){
+    if(isset($_POST['accion'])){
     switch ($_POST['accion']) {
         case 'registrar':
             guardarCita();
@@ -32,6 +32,8 @@
       $edadmascota = $_POST['edadmascota'];
       $fechacita = $_POST['fechacita'];
       $observaciones = $_POST['observaciones'];
+      
+      
       
       registrarCita($nombrepropietario,$nombremascota,$raza,$edadmascota,$fechacita,$observaciones);
   }
