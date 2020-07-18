@@ -34,7 +34,7 @@ include_once 'include/encabezado.php';
         <h5>Estado</h5>
         <input type="text" placeholder="Estado" name="estado" required value="<?=$usuario['estado'];?>">
         
-        <h5>Rol</h5>
+        <h5>Rol (admin O usuario)</h5>
         <input type="text" placeholder="Rol" name="rol" required value="<?=$usuario['rol'];?>">
         
         <h5>Password</h5>
@@ -44,4 +44,13 @@ include_once 'include/encabezado.php';
     </form>
     
 </section>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.php">Regresar al Menu Principal</a></li>
+        </ul>
+    </nav>
+</section>
+
 <?php include_once 'include/piepagina.php'; ?>

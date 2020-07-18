@@ -2,24 +2,46 @@
 <section>
     <br>
     <h1>Registo de Usuarios</h1>
-    <form method="post" action="mantenimientoUsuarios.php">		
-       <h5>Nombre</h5>
-        <input type="text" placeholder="Nombre" name="nombre" required>
-       <h5>Cedula</h5>
-        <input type="text" placeholder="Cedula"  name="cedula" required>
-        <h5>Telefono</h5> 
-        <input type="text" placeholder="Telefono" name="telefono" required>  
-         <h5>Correo</h5>
-        <input type="text" placeholder="Correo" name="correo" required>
-         <h5>Direccion</h5>
-        <input type="text" placeholder="Direccion" name="direccion" required> 
-         <h5>Estado(Inactivo Por Default)</h5>
-        <input type="text" value="inactivo" name="estado" readonly="">
-         <h5>Rol</h5>
-        <input type="text" placeholder="Rol" name="rol" required>
-         <h5>Contraseña</h5>
-        <input type="text" placeholder="Password" name="password" required>
-        <input type="submit" name="accion" value="registrar">
+    <form method="post" action="mantenimientoUsuarios.php">
+        
+        <table id="t1" border="1">
+            <thead>
+                <tr>
+                
+                <th>Nombre</th>
+                <th>Cedula</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th>Direccion</th>
+                <th>Estado</th>
+                <th>Rol</th>
+                <th>Password</th>
+                <th>Acción</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                <td><input type="text" placeholder="Nombre Completo" name="nombre" required></td>
+       
+                <td><input type="text" placeholder="1-1234-1234"  name="cedula" required></td>
+         
+                <td><input type="text" placeholder="Fijo Ó Celular" name="telefono" required></td>  
+         
+                <td><input type="text" placeholder="usuario@usuario" name="correo" required></td>
+         
+                <td><input type="text" placeholder="Lo Mas Exacta" name="direccion" required></td> 
+         
+                <td><input type="text" value="inactivo" name="estado" readonly=""></td>
+         
+                <td><input type="text" placeholder="admin o usuario" name="rol" required></td>
+         
+                <td><input type="text" placeholder="12@24_AA" name="password" required></td>
+                
+                <td><input type="submit" name="accion" value="registrar"></td>
+                
+            </tbody>
+        </table>
+        
     </form>
 </section>
 <section>
