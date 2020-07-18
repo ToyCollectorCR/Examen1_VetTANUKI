@@ -5,11 +5,16 @@ require_once './baseDatos/consultaUsuarios.php';
       switch ($_POST['accion']){          
           case 'Ingresar':
               $usuario = validarUsuario();
-              $rol = validaRyE();  //Valido Rol Y Estado
+              $usuario2 = validarUsuario2();
               if(!empty($usuario)){
                   $_SESSION['usuarioLogueado'] = $usuario;
                   header('location:index.php');
-              }else{
+              }
+              else if (!empty($usuario2)){
+                  $_SESSION['usuarioLogueado'] = $usuario2;
+                  header('location:indexUsuarios.php');
+              }
+              else {
                   header('location:login.php');
               }
           break;          
@@ -26,13 +31,12 @@ require_once './baseDatos/consultaUsuarios.php';
     return $usuario;
   }
   
-    function validaRyE(){
+function validarUsuario2(){
       
-    $rol = $_POST['rol']; 
-    $estado = $_POST['estado'];
+    $correo = $_POST['correo']; 
+    $password = $_POST['password'];
     
-    $usuario = buscarUsuario($rol,$estado);          
-    return $rol;
+    $usuario = buscarUsuario2($correo,$password);          
+    return $usuario;
   }
-  
 ?>

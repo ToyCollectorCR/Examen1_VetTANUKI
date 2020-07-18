@@ -23,7 +23,7 @@
             <tbody>
                 <td><input type="text" placeholder="Nombre Completo" name="nombre" required></td>
        
-                <td><input type="text" placeholder="1-1234-1234"  name="cedula" required></td>
+                <td><input type="text" placeholder="112341234"  name="cedula" required></td>
          
                 <td><input type="text" placeholder="Fijo Ó Celular" name="telefono" required></td>  
          

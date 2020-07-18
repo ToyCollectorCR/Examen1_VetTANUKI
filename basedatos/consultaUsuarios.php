@@ -2,15 +2,29 @@
 
   require_once 'conexionDB.php';
  
-    //Busca el  usuario por correo y password
+    //Busca el  usuario por correo - password Y Verifica que el Rol se activo y sea admin
   function buscarUsuario($correo,$password){
-      $sql = "SELECT * FROM VETUSUARIOS WHERE CORREO='$correo' AND PASSWORD='$password'";
+      $sql = "SELECT * FROM VETUSUARIOS WHERE CORREO='$correo' AND PASSWORD='$password' AND ESTADO='activo' AND ROL='admin'";
        $resultado = mysqli_query($GLOBALS['conexion'], $sql); 
        
        $usuario = mysqli_fetch_assoc($resultado);
        
        return $usuario;
   } 
+  
+  
+     //Busca el  usuario por correo - password Y Verifica que el Rol se activo y sea usuario
+  function buscarUsuario2($correo,$password){
+      $sql = "SELECT * FROM VETUSUARIOS WHERE CORREO='$correo' AND PASSWORD='$password' ESTADO='activo' AND ROL='usuario'";
+       $resultado = mysqli_query($GLOBALS['conexion'], $sql); 
+       
+       $usuario2 = mysqli_fetch_assoc($resultado);
+       
+       return $usuario2;
+  } 
+  
+  
+   
   
    //listo usuarios
   function listarUsuarios(){    
