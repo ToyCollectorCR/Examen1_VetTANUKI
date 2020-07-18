@@ -11,7 +11,7 @@
                 <li><a href="registroCitas.php">Registro De Citas</a></li>
                 
                 <li><a href="registrarUsuario.php">Registrar Usuario</a></li>
-                <li><a href="index.php">Activar/Desactivar Usuario</a></li>
+                <li><a href="listarUsuarios.php">Modificar Usuario</a></li>
                 
             <?php endif;?>
             </ul>

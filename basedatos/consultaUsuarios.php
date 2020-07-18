@@ -11,7 +11,22 @@
        
        return $usuario;
   } 
-  //registro citas
+  
+   //listo usuarios
+  function listarUsuarios(){    
+      $usuarios = array();
+      $sql = "SELECT * FROM VETUSUARIOS ORDER BY NAME ASC";
+      $resultado = mysqli_query($GLOBALS['conexion'], $sql);
+            
+      while($usuario = mysqli_fetch_assoc($resultado)){
+          array_push($usuarios, $usuario);
+      } 
+      
+      return $usuarios;
+  }
+  
+  
+  //registro usuarios
   function registrarUsuario($nombre,$cedula,$telefono,$correo,$direccion,$estado,$rol,$password){
       
       $sql = "INSERT INTO VETUSUARIOS VALUES('$nombre','$cedula',$telefono,'$correo','$direccion','$estado','$rol','$password')";

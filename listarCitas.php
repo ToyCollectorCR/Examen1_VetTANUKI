@@ -39,4 +39,12 @@
         </tbody>
     </table>
 </section> 
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.php">Regresar al Menu Principal</a></li>
+        </ul>
+    </nav>
+</section>
 <?php include_once 'include/piepagina.php'; ?>

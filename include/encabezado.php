@@ -5,6 +5,7 @@
 <?php 
     
 require_once './baseDatos/consultaCitas.php'; 
+require_once './baseDatos/consultaUsuarios.php'; 
    
 if(!isset($_SESSION['usuarioLogueado'])){
        header('location:login.php');
