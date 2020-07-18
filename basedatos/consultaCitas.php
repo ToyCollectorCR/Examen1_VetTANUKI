@@ -29,7 +29,7 @@ require_once 'conexionDB.php';
       $resultado = mysqli_query($GLOBALS['conexion'], $sql);   
   }
   
-  //Busco citas por nombre
+  //Busco citas por id
   function buscarCita($id){
       $sql = "SELECT * FROM VETCITAS WHERE id = $id";
        $resultado = mysqli_query($GLOBALS['conexion'], $sql); 

@@ -6,8 +6,7 @@ include_once 'include/encabezado.php';
      
       $id  = $_GET['id'];
       $cita = buscarCita($id);
-      //var_dump($cita);
-      //die();
+
       
   }
 ?>

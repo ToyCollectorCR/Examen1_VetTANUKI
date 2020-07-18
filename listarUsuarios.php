@@ -13,7 +13,7 @@
                 <th>Estado</th>
                 <th>Rol</th>
                 <th>Password</th>
-                
+            
             </tr>
         </thead>
         <tbody>
@@ -31,8 +31,8 @@
                     <td><?=$usuario['estado'];?></td>
                     <td><?=$usuario['rol'];?></td>
                     <td><?=$usuario['password'];?></td>
-                    <td><a href="editarCitas.php?id=<?=$cita['id'];?>">Modificar</a></td>
-                    <td><a href="mantenimientoCitas.php?accion=eliminar&id=<?=$cita['id'];?>">Eliminar</a></td>
+                    <td><a href="editarUsuario.php?cedula=<?=$usuario['cedula'];?>">Modificar</a></td>
+                    <td><a href="mantenimientoUsuarios.php?accion=eliminar&cedula=<?=$usuario['cedula'];?>">Eliminar</a></td>
                 </tr>
         <?php
                endforeach;
@@ -50,3 +50,4 @@
     </nav>
 </section>
 <?php include_once 'include/piepagina.php'; ?>
+
