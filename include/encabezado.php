@@ -25,11 +25,12 @@ if(!isset($_SESSION['usuarioLogueado'])){
     <body>
         
             <h1>BIENVENIDOS A VETERINARIA TANUKI</h1>
-         <nav>
+        <!-- 
+        <nav>
             <ul>
-            <?php if(isset($_SESSION['usuarioLogueado'])):?>
+            <?php // if(isset($_SESSION['usuarioLogueado'])):?>
                 <li><a href="cerrarSesion.php">Cerrar Sesión</a></li>
-            <?php endif;?>
+            <?php //endif;?>
             </ul>
         </nav>
-         
+        --> 
