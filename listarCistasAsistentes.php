@@ -29,6 +29,8 @@
                     <td><?=$cita['edadmascota'];?></td>
                     <td><?=$cita['fechacita'];?></td>
                     <td><?=$cita['observaciones'];?></td>
+                    <td><a href="editarCitas.php?id=<?=$cita['id'];?>">Modificar</a></td>
+                    <td><a href="mantenimientoCitas.php?accion=eliminar&id=<?=$cita['id'];?>">Eliminar</a></td>
 
                 </tr>
         <?php
@@ -42,7 +44,7 @@
 <section>
     <nav>
         <ul>
-            <li><a href="index.php">Regresar al Menu Principal</a></li>
+            <li><a href="indexAsistentes.php">Regresar al Menu Principal</a></li>
         </ul>
     </nav>
 </section>

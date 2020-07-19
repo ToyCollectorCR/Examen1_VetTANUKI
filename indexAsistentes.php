@@ -8,6 +8,7 @@
             <?php if(isset($_SESSION['usuarioLogueado'])):?>
                 
                 <li><a href="listarCistasAsistentes.php">Listado de Citas</a></li>
+                <li><a href="registroCitasAsistentes.php">Registro De Citas</a></li>
                 
             <?php endif;?>
             </ul>

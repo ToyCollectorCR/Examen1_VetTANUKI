@@ -12,7 +12,7 @@ require_once './baseDatos/consultaUsuarios.php';
                   if($usuario['rol'] == 'admin'){
                       header('location:index.php');
                   }else if ($usuario['rol'] == 'asistente' && $usuario['estado'] == 'activo'){
-                      header('location:indexUsuarios.php');
+                      header('location:indexAsistentes.php');
                   }else{
                        header('location:login.php');
                   }
