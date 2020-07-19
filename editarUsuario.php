@@ -31,10 +31,10 @@ include_once 'include/encabezado.php';
         <h5>Direccion</h5>
         <input type="text" placeholder="Direccion" name="direccion" required value="<?=$usuario['direccion'];?>">
         
-        <h5>Estado</h5>
+        <h5>Estado (activo/inactivo)</h5>
         <input type="text" placeholder="Estado" name="estado" required value="<?=$usuario['estado'];?>">
         
-        <h5>Rol (admin O usuario)</h5>
+        <h5>Rol (administrador/asistente)</h5>
         <input type="text" placeholder="Rol" name="rol" required value="<?=$usuario['rol'];?>">
         
         <h5>Password</h5>

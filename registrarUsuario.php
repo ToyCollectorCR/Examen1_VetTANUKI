@@ -33,9 +33,9 @@
          
                 <td><input type="text" value="inactivo" name="estado" readonly=""></td>
          
-                <td><input type="text" placeholder="admin o usuario" name="rol" required></td>
+                <td><input type="text" placeholder="administrador/asistente" name="rol" required></td>
          
-                <td><input type="text" placeholder="12@24_AA" name="password" required></td>
+                <td><input type="password" placeholder="12@24_AA" name="password" required></td>
                 
                 <td><input type="submit" name="accion" value="registrar"></td>
                 

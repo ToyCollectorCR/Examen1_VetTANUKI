@@ -25,7 +25,7 @@ include_once 'include/encabezado.php';
          <h5>Edad de la Mascota</h5>
         <input type="text" placeholder="Edad de la Mascota" name="edadmascota" required value="<?=$cita['edadmascota'];?>"><br>
         <h5>Fecha de la Cita</h5>
-        <input type="text" placeholder="Fecha de la Cita" name="fechacita" required value="<?=$cita['fechacita'];?>"><br>
+        <input type="date" name="fechacita" required value="<?=$cita['fechacita'];?>"><br>
         <h5>Observaciones</h5>
         <input type="text" placeholder="Observaciones" name="observaciones" required value="<?=$cita['observaciones'];?>"><br><br>
         <input type="submit" name="accion" value="actualizar">

@@ -7,7 +7,7 @@
             <ul>
             <?php if(isset($_SESSION['usuarioLogueado'])):?>
                 
-                <li><a href="listarCitas.php">Listado de Citas</a></li>
+                <li><a href="listarCistasAsistentes.php">Listado de Citas</a></li>
                 
             <?php endif;?>
             </ul>
