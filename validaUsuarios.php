@@ -36,7 +36,7 @@ function validarUsuario2(){
     $correo = $_POST['correo']; 
     $password = $_POST['password'];
     
-    $usuario = buscarUsuario2($correo,$password);          
-    return $usuario;
+    $usuario2 = buscarUsuario2($correo,$password);          
+    return $usuario2;
   }
 ?>
